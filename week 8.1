@@ -1,0 +1,17 @@
+def find_winner(votes):
+    vote_count = {}
+
+    for candidate in votes:
+        vote_count[candidate] = vote_count.get(candidate, 0) + 1
+    
+    max_votes = max(vote_count.values())
+    winners = [candidate for candidate, votes in vote_count.items() if votes == max_votes]
+
+    winner = min(winners)
+    
+    return winner
+
+n = int(input())
+votes = [input().strip() for _ in range(n)]
+winner = find_winner(votes)
+print(winner)
