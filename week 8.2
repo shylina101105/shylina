@@ -1,0 +1,21 @@
+b=input()
+m=0
+a,n,c,d,e,f,g=0,0,0,0,0,0,0
+for i in b:
+    if(i=='A' or 'E' or 'I' or 'L' or 'N' or 'O' or 'R' or 'S' or 'T' or 'U'):
+        a+=1
+    elif(i=='D' or 'G'):
+        n+=2
+    elif(i=='B' or 'C' or 'M' or 'P'):
+        c+=3
+    elif(i=='F' or 'H' or 'V' or 'W' or 'Y'):
+        d+=4
+    elif(i=='K'):
+        e+=5
+    elif(i=='J' or 'X'):
+        f+=8
+    else:
+        g+=10
+    m+=a+n+c+d+e+f+g
+print(b,"is worth",m-1,"points.")
+    
