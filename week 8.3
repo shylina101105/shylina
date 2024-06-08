@@ -1,0 +1,9 @@
+n = int(input())
+dictionaries = {}
+for _ in range(n):
+    key, *values = input().split()
+    values = list(map(int, values))
+    dictionaries[key] = values
+sorted_dictionaries = dict(sorted(dictionaries.items(), key=lambda item: sum(item[1])))
+for key, values in sorted_dictionaries.items():
+    print(key, sum(values))
