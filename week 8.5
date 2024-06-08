@@ -1,0 +1,12 @@
+s1 =str(input())
+s2 =str(input())
+word_count = {}
+for word in s1.split():
+    word_count[word] = word_count.get(word, 0) + 1
+for word in s2.split():
+    word_count[word] = word_count.get(word, 0) + 1
+uncommon_words = []
+for word, count in word_count.items():
+    if count == 1 and (word in s1 or word in s2):
+        uncommon_words.append(word)
+print(" ".join(uncommon_words))
